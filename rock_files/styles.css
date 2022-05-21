@@ -1,0 +1,229 @@
+:root {
+  --primary-light: #ddd;
+  --primary-dark: #222831;
+  --secondary-dark: #393e46;
+  --secondary-dark-hover: #4a4f57;
+  --secondary-dark-active: #5b5f68;
+  --header: #111720;
+  --primary-yellow: #fac650;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  /* footer support */
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  /* footer support */
+  margin-bottom: 100px;
+}
+
+button {
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px;
+  background-color: var(--header);
+}
+
+.title {
+  font-size: 32px;
+  color: var(--primary-yellow);
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* MAIN */
+
+.main {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.scoreboard {
+  margin-bottom: 15px;
+}
+
+.score-info {
+  font-size: 32px;
+}
+
+.score-message {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.scores-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 400px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.score-box {
+  width: 170px;
+}
+
+.score {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.btn {
+  border-radius: 10px;
+  background-color: var(--secondary-dark);
+}
+
+.btn-square {
+  width: 160px;
+  height: 160px;
+}
+
+.btn:hover {
+  background-color: var(--secondary-dark-hover);
+}
+
+.btn:active {
+  background-color: var(--secondary-dark-active);
+}
+
+.sign {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  color: var(--primary-light);
+  font-size: 20px;
+}
+
+.fa-github {
+  color: var(--primary-light);
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* MODALS */
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--primary-dark);
+  text-align: center;
+  font-size: 30px;
+  user-select: none;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.btn-restart {
+  padding: 10px 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 550px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .score-info {
+    font-size: 26px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  .btn-square {
+    width: 100px;
+    height: 100px;
+  }
+
+  .sign {
+    font-size: 50px;
+  }
+
+  .modal {
+    width: 95%;
+  }
+}

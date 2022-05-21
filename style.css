@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    background-color: darkslategray;
+    font-family: roboto, arial, sans-serif;
+}
+
+h2 { 
+    color: aliceblue;
+}
+h3 {
+    color: aliceblue;
+}
+#sp1 {
+    margin-right: 300px;
+}
+div span {
+    margin-top: 500px;
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+img {
+    width: 150px;
+    height: 150px;
+    
+}
+img #rock {
+    margin-right: 10px;
+}
